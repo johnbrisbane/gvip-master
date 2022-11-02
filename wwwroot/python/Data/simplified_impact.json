@@ -1,0 +1,95 @@
+{
+    "Social": {
+        "Jails": 5,
+        "Housing": 50,
+        "Other": 0,
+        "Hospitals": 40
+    },
+    "Information & Communication Technologies": {
+        "Cable": 10,
+        "Fixed Line": 0,
+        "Other": 0,
+        "Wireless": 15,
+        "Broadband": 15
+    },
+    "Energy Efficiency/ Electric Equipment": {
+        "Led / power systems": 10,
+        "Other": 0
+    },
+    "Water": {
+        "Potable": 30,
+        "Industrial Water (Treatment/Re-use)": 30,
+        "Water Supply": 30,
+        "Waste Water": 30,
+        "Other": 0,
+        "Water Resources": 0,
+        "Irrigation": 0
+    },
+    "Energy": {
+        "Transmission": -10,
+        "Other": 0,
+        "Generation \u2014 Oil-Fired": -45,
+        "Generation \u2014 Hydro": -10,
+        "Distribution": -10,
+        "Generation \u2014 Nuclear": -15,
+        "Generation \u2014 Renewables": 0,
+        "Generation \u2014 Natural Gas": -45,
+        "Hydrogen": 0,
+        "Generation \u2014 Coal": -50
+    },
+    "Oil & Gas": {
+        "Other": -25,
+        "Pipelines \u2014\u00a0Liquid": -30,
+        "Pipelines \u2014\u00a0Gas": -30,
+        "Compressor Stations": -40,
+        "Extraction": -50
+    },
+    "Transport": {
+        "Tunnels": -5,
+        "Bridges": -2,
+        "Freight Rail": -10,
+        "Multimodal": 5,
+        "Other": 5,
+        "Urban Highways": -35,
+        "Highways": -30,
+        "Transit": 20,
+        "Ports & Logistics": -40,
+        "Airports & Logistics": -40
+    },
+    "Industrial": {
+        "Other": -10
+    },
+    "Tourism & Related": {
+        "Other": 0
+    },
+    "Mining & Related": {
+        "Bridges": -10,
+        "Freight Rail": -20,
+        "Electricity Generation": -10,
+        "Other": -10,
+        "Highways": -40
+    },
+    "": {
+        "": 0,
+        "Other": 0
+    },
+    "Urban Planning & Design": {
+        "Other": 0
+    },
+    "Smart Cities": {
+        "Other": 5
+    },
+    "Real Estate": {
+        "Other": 0
+    },
+    "Logistics": {
+        "Other": 0
+    },
+    "Other": {
+        "Other": 0
+    },
+    "Retail": {
+        "Supermarkets": 5,
+        "Other": 0
+    }
+}

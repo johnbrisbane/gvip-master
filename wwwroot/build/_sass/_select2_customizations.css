@@ -1,0 +1,88 @@
+.select2-container {
+	text-align: left;
+	float: right;
+	font-size: 14px;}
+
+.select2-container .select2-selection {
+	min-height: 41px;
+	vertical-align: middle;
+	display: flex;
+	align-items: center; /* align vertical */
+}
+
+.select2-selection--single {
+	position: relative;
+	vertical-align: middle;
+	padding-left: 2px;
+	font-family: 'Open Sans Bold';
+}
+.select2-container--default .select2-selection--multiple .select2-selection__choice {
+	font-family: 'Open Sans Bold';
+	margin-top: 0px;
+	margin-bottom: 2px;
+}
+
+li.select2-selection__choice {
+	font-size: 14px;
+}
+
+.select2-container .select2-search--inline .select2-search__field {
+	font-family: 'Open Sans Bold';
+    margin-top: -2px;
+	position: relative;
+	vertical-align: middle;
+	color: #373b43;
+	font-size: 14px;
+}
+.select2-selection__arrow {
+	margin-top: 5px;
+	position: relative;
+	vertical-align: middle;
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #373b43;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #373b43;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #373b43;
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    #373b43;
+}
+
+[placeholder]:focus::-webkit-input-placeholder {
+  transition: opacity 0.0s 0.0s ease; 
+  opacity: 0;
+}
+[placeholder]:focus:-moz-placeholder {
+  transition: opacity 0.0s 0.0s ease; 
+  opacity: 0;
+}
+[placeholder]:focus::-moz-placeholder {
+  transition: opacity 0.0s 0.0s ease; 
+  opacity: 0;
+}
+[placeholder]:focus:-ms-input-placeholder {
+  transition: opacity 0.0s 0.0s ease; 
+  opacity: 0;
+}
+
+/* Re-enable glow around boxes to show they are focused */
+
+.form span[class^="select2"]:active,
+.form span[class^="select2"]:focus,
+.form span[class*=" select2"]:active,
+.form span[class*=" select2"]:focus,
+.form .select2-container--focus,
+.form span.select2-container--focus span.select2-selection--multiple
+{
+    border: solid 1px #72b3e4;
+    background: #f8f8fa;
+    box-shadow: 0 0 3px rgba(95, 164, 215, .75);
+}
+

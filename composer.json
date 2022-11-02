@@ -1,0 +1,25 @@
+{
+    "require": {
+        "vlucas/phpdotenv": "~2.4",
+        "nesbot/carbon": "^1.21",
+        "algolia/algoliasearch-client-php": "^1.16",
+        "league/glide": "^1.2",
+        "guzzlehttp/guzzle": "^6.3",
+        "php-http/guzzle6-adapter": "^1.1",
+        "sparkpost/sparkpost": "^2.1",
+        "soundasleep/html2text": "^0.5.0",
+        "segmentio/analytics-php": "^1.5",
+        "stripe/stripe-php": "^7.97"
+    },
+    "require-dev": {
+        "codeception/codeception": "*",
+        "fzaninotto/faker": "1.5.*@dev"
+    },
+    "autoload": {
+      "files": [
+        ".app/helpers.php",
+        ".app/libraries/Matches_lib.php"
+      ],
+      "psr-4": { "GViP\\": ".app/libraries"}
+    }
+}

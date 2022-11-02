@@ -1,0 +1,45 @@
+# Environment settings
+.env
+
+# Cache folders
+application/cache/**
+wwwroot/cache/**
+backend/cache/**
+
+# Log folders
+application/logs/**
+backend/logs/**
+storage/logs/app/**
+storage/logs/admin/**
+
+# User-uploaded content
+wwwroot/images/content_projects/**
+wwwroot/images/forum/**
+wwwroot/images/maps/**
+wwwroot/images/member_photos/**
+wwwroot/images/signup/**
+wwwroot/images/store/**
+
+# Development files
+*.sublime-*
+.php_cs.cache
+wwwroot/node_modules/**
+.idea/**
+wwwroot/phpinfo.php
+
+# Session files
+storage/session/**
+
+# Mac OSX system files
+.DS_Store
+Icon?
+
+# Build artefacts
+wwwroot/.sass-cache/**
+wwwroot/js/main.*.js*
+wwwroot/js/vendor.*.js*
+wwwroot/js/runtime.*.js*
+wwwroot/js/bundles.html
+
+# Composer-installed dependencies
+vendor/

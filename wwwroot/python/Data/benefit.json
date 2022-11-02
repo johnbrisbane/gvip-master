@@ -1,0 +1,272 @@
+{
+    "Social": {
+        "Jails": {
+            "Benefit": 1,
+            "Weight": 1
+        },
+        "Housing": {
+            "Benefit": 1,
+            "Weight": 1
+        },
+        "Other": {
+            "Benefit": 1,
+            "Weight": 1
+        },
+        "Hospitals": {
+            "Benefit": 1,
+            "Weight": 1
+        }
+    },
+    "Information & Communication Technologies": {
+        "Cable": {
+            "Benefit": 1,
+            "Weight": 1
+        },
+        "Fixed Line": {
+            "Benefit": 1,
+            "Weight": 1
+        },
+        "Other": {
+            "Benefit": 1,
+            "Weight": 1
+        },
+        "Wireless": {
+            "Benefit": 1,
+            "Weight": 1
+        },
+        "Broadband": {
+            "Benefit": 1,
+            "Weight": 1
+        }
+    },
+    "Energy Efficiency/ Electric Equipment": {
+        "Led / power systems": {
+            "Benefit": 1,
+            "Weight": 1
+        },
+        "Other": {
+            "Benefit": 1,
+            "Weight": 1
+        }
+    },
+    "Water": {
+        "Potable": {
+            "Benefit": 1,
+            "Weight": 1
+        },
+        "Industrial Water (Treatment/Re-use)": {
+            "Benefit": 1,
+            "Weight": 1
+        },
+        "Water Supply": {
+            "Benefit": 1,
+            "Weight": 1
+        },
+        "Waste Water": {
+            "Benefit": 1,
+            "Weight": 1
+        },
+        "Other": {
+            "Benefit": 1,
+            "Weight": 1
+        },
+        "Water Resources": {
+            "Benefit": 1,
+            "Weight": 1
+        },
+        "Irrigation": {
+            "Benefit": 1,
+            "Weight": 1
+        }
+    },
+    "Energy": {
+        "Transmission": {
+            "Benefit": 1,
+            "Weight": 1
+        },
+        "Other": {
+            "Benefit": 1,
+            "Weight": 1
+        },
+        "Generation \u2014 Oil-Fired": {
+            "Benefit": 1,
+            "Weight": 1
+        },
+        "Generation \u2014 Hydro": {
+            "Benefit": 1,
+            "Weight": 1
+        },
+        "Distribution": {
+            "Benefit": 1,
+            "Weight": 1
+        },
+        "Generation \u2014 Nuclear": {
+            "Benefit": 1,
+            "Weight": 1
+        },
+        "Generation \u2014 Renewables": {
+            "Benefit": 1,
+            "Weight": 1
+        },
+        "Generation \u2014 Natural Gas": {
+            "Benefit": 1,
+            "Weight": 1
+        },
+        "Hydrogen": {
+            "Benefit": 1,
+            "Weight": 1
+        },
+        "Generation \u2014 Coal": {
+            "Benefit": 1,
+            "Weight": 1
+        }
+    },
+    "Oil & Gas": {
+        "Other": {
+            "Benefit": 1,
+            "Weight": 1
+        },
+        "Pipelines \u2014\u00a0Liquid": {
+            "Benefit": 1,
+            "Weight": 1
+        },
+        "Pipelines \u2014\u00a0Gas": {
+            "Benefit": 1,
+            "Weight": 1
+        },
+        "Compressor Stations": {
+            "Benefit": 1,
+            "Weight": 1
+        },
+        "Extraction": {
+            "Benefit": 1,
+            "Weight": 1
+        }
+    },
+    "Tourism & Related": {
+        "Other": {
+            "Benefit": 1,
+            "Weight": 1
+        }
+    },
+    "Transport": {
+        "Tunnels": {
+            "Benefit": 1,
+            "Weight": 1
+        },
+        "Bridges": {
+            "Benefit": 1,
+            "Weight": 1
+        },
+        "Freight Rail": {
+            "Benefit": 1,
+            "Weight": 1
+        },
+        "Multimodal": {
+            "Benefit": 1,
+            "Weight": 1
+        },
+        "Other": {
+            "Benefit": 1,
+            "Weight": 1
+        },
+        "Urban Highways": {
+            "Benefit": 1,
+            "Weight": 1
+        },
+        "Highways": {
+            "Benefit": 1,
+            "Weight": 1
+        },
+        "Transit": {
+            "Benefit": 1,
+            "Weight": 1
+        },
+        "Ports & Logistics": {
+            "Benefit": 1,
+            "Weight": 1
+        },
+        "Airports & Logistics": {
+            "Benefit": 1,
+            "Weight": 1
+        }
+    },
+    "Industrial": {
+        "Other": {
+            "Benefit": 1,
+            "Weight": 1
+        }
+    },
+    "Mining & Related": {
+        "Bridges": {
+            "Benefit": 1,
+            "Weight": 1
+        },
+        "Freight Rail": {
+            "Benefit": 1,
+            "Weight": 1
+        },
+        "Electricity Generation": {
+            "Benefit": 1,
+            "Weight": 1
+        },
+        "Other": {
+            "Benefit": 1,
+            "Weight": 1
+        },
+        "Highways": {
+            "Benefit": 1,
+            "Weight": 1
+        }
+    },
+    "": {
+        "": {
+            "Benefit": 1,
+            "Weight": 1
+        },
+        "Other": {
+            "Benefit": 1,
+            "Weight": 1
+        }
+    },
+    "Urban Planning & Design": {
+        "Other": {
+            "Benefit": 1,
+            "Weight": 1
+        }
+    },
+    "Smart Cities": {
+        "Other": {
+            "Benefit": 1,
+            "Weight": 1
+        }
+    },
+    "Real Estate": {
+        "Other": {
+            "Benefit": 1,
+            "Weight": 1
+        }
+    },
+    "Logistics": {
+        "Other": {
+            "Benefit": 1,
+            "Weight": 1
+        }
+    },
+    "Other": {
+        "Other": {
+            "Benefit": 1,
+            "Weight": 1
+        }
+    },
+    "Retail": {
+        "Supermarkets": {
+            "Benefit": 1,
+            "Weight": 1
+        },
+        "Other": {
+            "Benefit": 1,
+            "Weight": 1
+        }
+    }
+}
