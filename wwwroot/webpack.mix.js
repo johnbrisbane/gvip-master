@@ -18,7 +18,6 @@ mix.js('build/_js/_custom/script.js', 'js/')
       processCssUrls: false,
       postCss: [
           require('postcss-import')({
-            // root: '/Users/mpavey/code/gvip/httpdocs/wwwroot/'
             // from: 'css/style.css'
           }),
         //   require('postcss-sprites')({

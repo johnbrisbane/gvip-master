@@ -1,9 +1,10 @@
-<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+<?php if (!defined('BASEPATH')) exit('No direct script access allowed');
 
 use GViP\Mail\Mail,
 	GViP\Mail\EmailRecipient;
 
-class Marketing extends CI_Controller {
+class Marketing extends CI_Controller
+{
 
 	/**
 	 * Index Page for this controller.
@@ -19,11 +20,11 @@ class Marketing extends CI_Controller {
 	public $headerdata = array();
 
 	/**
-	* Constructor
-	* Called when the object is created
-	*
-	* @access public
-	*/
+	 * Constructor
+	 * Called when the object is created
+	 *
+	 * @access public
+	 */
 	public function __construct()
 	{
 		parent::__construct();
@@ -31,9 +32,8 @@ class Marketing extends CI_Controller {
 		// Session check for the Login Status, redirect to Account Settings Page
 		// unless logged in as an admin user 
 		// OR controller is being run from the command line
-		if(!sess_var('admin_logged_in') && !$this->input->is_cli_request())
-		{
-			redirect('','refresh');
+		if (!sess_var('admin_logged_in') && !$this->input->is_cli_request()) {
+			redirect('', 'refresh');
 		}
 
 		// load model
@@ -67,7 +67,7 @@ class Marketing extends CI_Controller {
 		$this->load->view('templates/header', $this->headerdata);
 		$this->load->view('templates/leftmenu');
 		$this->load->view('marketing/algosemail', $data);
-		$this->load->view('templates/footer');	
+		$this->load->view('templates/footer');
 	}
 
 	/**
@@ -90,7 +90,7 @@ class Marketing extends CI_Controller {
 		$data['paginationLinks'] = $this->pagination->create_links();
 
 		$this->headerdata['title'] = $data['headertitle'] = "Algorithms Email | GViP Admin";
-		
+
 		$offset = $this->uri->segment(3);
 		$data['attendees'] = $this->forums_model->get_filtered_user_list($forumId, 5, $offset)['filter'];
 		foreach ($data['attendees'] as &$attendee) {
@@ -98,12 +98,12 @@ class Marketing extends CI_Controller {
 		}
 
 
-		
+
 
 		$this->load->view('templates/header', $this->headerdata);
 		$this->load->view('templates/leftmenu');
 		$this->load->view('marketing/algosemail/show_forum_recommendations', $data);
-		$this->load->view('templates/footer');	
+		$this->load->view('templates/footer');
 	}
 
 	/**
@@ -114,7 +114,7 @@ class Marketing extends CI_Controller {
 	{
 		ini_set('max_execution_time', 90); // TODO: Optimize so this can be run in 30s or less
 		$success = $this->send_recommendations_to_all_members();
-		
+
 		if (is_cli()) {
 			echo "The email was " . ($success ? "" : "NOT ") . "sent successfully.\n";
 			return;
@@ -123,8 +123,7 @@ class Marketing extends CI_Controller {
 		$menuUrl = '/marketing/algosemail';
 		if ($success) {
 			redirect($menuUrl . '?emailsuccess=true');
-		}
-		else {
+		} else {
 			redirect($menuUrl . '?emailsuccess=false');
 		}
 	}
@@ -137,17 +136,17 @@ class Marketing extends CI_Controller {
 	{
 		$this->load->model('algosemail_model');
 		$recommendationsData = $this->algosemail_model->get_recommendations_for_all_users(3);
-		
+
 		// Only send the email to members for whom we have three recommendations
-		$membersWithRecommendations = array_filter($recommendationsData, function($member) {
+		$membersWithRecommendations = array_filter($recommendationsData, function ($member) {
 			return count($member['recommendations']) === 3;
 		});
 
-		$recipients = array_map(function($member) {
+		$recipients = array_map(function ($member) {
 			return (new EmailRecipient(
-					$member['forMember']['firstname'] . ' ' . $member['forMember']['lastname'],
-					$member['forMember']['email']
-				)
+				$member['forMember']['firstname'] . ' ' . $member['forMember']['lastname'],
+				$member['forMember']['email']
+			)
 			)->addSubstitutionData([
 				'experts' => $member['recommendations'],
 				'firstname' => $member['forMember']['firstname'],
@@ -155,12 +154,12 @@ class Marketing extends CI_Controller {
 				'uid' => $member['forMember']['uid'],
 			]);
 		}, $membersWithRecommendations);
-		
+
 		$email = new Mail();
 		return $email->addRecipients($recipients)
-					 ->subject('Your GViP expert recommendations for ' . date('F'))
-					 ->body($this->load->view('marketing/emails/algosemail_html', '', true))
-					 ->send();
+			->subject('Your GViP expert recommendations for ' . date('F'))
+			->body($this->load->view('marketing/emails/algosemail_html', '', true))
+			->send();
 	}
 
 	public function mailtest()
@@ -174,7 +173,7 @@ class Marketing extends CI_Controller {
 		}
 
 		$recipients = [
-			(new EmailRecipient('Michael Pavey', 'michael@cg-la.com'))->addSubstitutionData([
+			(new EmailRecipient('John Brisbane', 'john@cg-la.com'))->addSubstitutionData([
 				'experts' => $recommendedExperts,
 				'firstname' => 'Norman',
 				'month' => date('F'),
@@ -184,9 +183,9 @@ class Marketing extends CI_Controller {
 
 		$email = new Mail();
 		$email->addRecipients($recipients)
-			  ->subject('Your GViP expert recommendations for ' . date('F'))
-			  ->body($this->load->view('marketing/emails/algosemail_html', '', true))
-			  ->send();
+			->subject('Your GViP expert recommendations for ' . date('F'))
+			->body($this->load->view('marketing/emails/algosemail_html', '', true))
+			->send();
 	}
 
 	/**
@@ -200,13 +199,13 @@ class Marketing extends CI_Controller {
 
 		$expertURLs = array_filter($this->input->post('experts') ?: []);
 		$projectURLs = array_filter($this->input->post('projects') ?: []);
-		
+
 		if (count($expertURLs) < 4 || count($projectURLs) < 4) {
 			$data['errors'][] = "You didn't include enough experts/projects! Please go back and ensure all fields are completed.";
 		}
 
 		$expertsData = array_filter($this->get_experts_data_for_email($expertURLs));
-		
+
 		if (count($expertsData) < 4) {
 			$data['errors'][] = "Not all the experts appear to exist in the database. Please check you copied the URLs correctly!";
 		}
@@ -237,7 +236,7 @@ class Marketing extends CI_Controller {
 	{
 		$expertsData = [];
 		$requiredExpertFields = "uid, firstname, lastname, title, organization, userphoto";
-		
+
 		// TODO: Consider implementing (or finding) a new method to retrieve all rows in a single query
 		foreach ($expertURLs as $expertURL) {
 			if (!preg_match('/\d+$/', $expertURL, $matches)) continue;
@@ -257,14 +256,14 @@ class Marketing extends CI_Controller {
 	{
 		$projectsData = [];
 		$requiredProjectFields = "slug, projectname, projectphoto";
-		
+
 		// TODO: Consider implementing (or finding) a new method to retrieve all rows in a single query
 		foreach ($projectURLs as $projectURL) {
 			if (!preg_match('/[^\/]+$/', $projectURL, $matches)) continue;
 			$slug = $matches[0];
 			$projectsData[] = $this->projects_model->find_from_slug($slug, $requiredProjectFields);
 		}
-		
+
 		return $projectsData;
 	}
 }
